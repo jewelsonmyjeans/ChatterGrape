@@ -1,6 +1,6 @@
 /* Posts Page CSS */
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 h1 {
     text-align: center;
@@ -12,10 +12,10 @@ main {
     margin-top: 30px;
 }
 .navbar-nav .nav-item:hover .nav-link {
-    color: var(--cadet-gray);
+    color: var(--lavender)  !important;
 }
 .navbar {
-    background: linear-gradient(to right, var(--light-blue), var(--cadet-gray));
+    background: linear-gradient(to right, var(--pink), var(--lavender));
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .card-title {
@@ -66,5 +66,5 @@ main {
     filter: brightness(90%);
 }
 footer {
-    background-color: var(--cadet-gray);
+    background-color: var(--lavender);
 }

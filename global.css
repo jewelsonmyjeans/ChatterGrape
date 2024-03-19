@@ -15,17 +15,17 @@
 
 :root {
   font-size: 1rem;
-  --celadon: #b9d8c2;
-  --light-blue: #9ac2c9;
-  --cadet-gray: #8aa1b1;
+  --pink: #BE95C4;
+  --dark-purple: #5E548E;
+  --lavender: #9F86C0;
   --ebony: #4a5043;
   --gunmetal: #2a2d34;
 }
 
 body {
-  background-color: var(--light-blue);
+  background-color: var(--dark-purple);
 }
 
 footer {
-  background-color: var(--cadet-gray);
+  background-color: var(--lavender);
 }

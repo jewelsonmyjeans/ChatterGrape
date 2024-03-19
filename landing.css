@@ -1,18 +1,17 @@
 /* Landing Page CSS */
 :root {
   font-size: 1rem;
-  --celadon: #b9d8c2;
-  --light-blue: #9ac2c9;
-  --cadet-gray: #8aa1b1;
+  --pink: #BE95C4;
+  --dark-purple: #5E548E;
+  --lavender: #9F86C0;
   --ebony: #4a5043;
   --gunmetal: #2a2d34;
 }
 
 body {
-  background-color: var(--light-blue);
+  background-color: var(--dark-purple);
   margin: 0 auto;
-  font-family: 'DM Sans', sans-serif;
-
+  font-family: "Inter", sans-serif;
 }
 
 header {
@@ -25,13 +24,13 @@ header code {
 }
 
 .landing-card {
-  background-color: var(--celadon);
+  background-color: var(--pink);
   border-radius: 10px;
 }
 
 .btn-primary {
-  background-color: var(--cadet-gray);
-  border-color: var(--cadet-gray);
+  background-color: var(--lavender);
+  border-color: var(--lavender);
   margin: 0 auto;
 }
 .btn-primary:first-of-type {
@@ -43,7 +42,7 @@ header code {
 .btn-primary:focus {
   background-color: var(--gunmetal);
   border-color: var(--gunmetal);
-  color: var(--celadon);
+  color: var(--pink);
 }
 
 .checkbox {
