@@ -37,7 +37,6 @@ function createPostCard(post, loginData) {
     // Combine date and time
     let dateTimeString = `${datePart} ${timePart}`;
 
-
     return `
         <div class="col mb-4">
             <div class="card mb-3 custom-card">
@@ -56,8 +55,8 @@ function createPostCard(post, loginData) {
                             </button>` : ''}
                     </div>
                     <div class="d-flex align-items-center">
-                        <button class="like-button like-btn" id="${post._id}" onclick="likeUnlikeToggle('${post._id}')">
-                            <i class="fas fa-heart btn-like"></i> Like
+                        <button class="like-button ${window.localStorage.getItem(post._id) ? '' : 'like-btn'}" id="${post._id}" onclick="likeUnlikeToggle('${post._id}')">
+                            <i class="fas fa-heart btn-like"></i> ${window.localStorage.getItem(post._id) ? 'Unlike' : 'Like'}
                         </button>
                         <span class="likes-count">${countLikes(post.likes)} Likes</span>
                     </div>
@@ -68,7 +67,6 @@ function createPostCard(post, loginData) {
             </div>
         </div>`;
 }
-
 
 // Delete a post
 function deletePost(postId) {
@@ -120,6 +118,7 @@ function toggleLike(postId) {
 
     let likeButton = document.querySelector(`button[id='${postId}']`)
     likeButton.classList.toggle('like-btn')
+    likeButton.innerHTML = '<i class="fas fa-heart btn-like"></i> Unlike';
     let options = {
         method: "POST",
         headers: {
@@ -134,7 +133,6 @@ function toggleLike(postId) {
         .then((data) => {
             window.localStorage.setItem(data.postId, data._id)
             window.location.reload()
-            
         });
 }
 
@@ -144,6 +142,7 @@ function untoggleLike(postId) {
 
     let likeButton = document.querySelector(`button[id='${postId}']`)
     likeButton.classList.toggle('like-btn')
+    likeButton.innerHTML = '<i class="fas fa-heart btn-like"></i> Like';
     let endpoint = window.localStorage.getItem(postId)
     let options = {
         method: "DELETE",

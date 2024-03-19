@@ -45,6 +45,7 @@ main {
     border: none;
     cursor: pointer;
     padding: 0;
+    margin-right: 5px;
 }
 
 .like-button:hover {
